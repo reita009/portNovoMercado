@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Colors from "../../../components/Colors.js";
 
 export const Header = styled.header`
-  height: ${(props) => (props.size === "big" ? "300px" : "150px")};
+  height: ${(props) => (props.size === "big" ? "300px" : "120px")};
   width: 100%;
   display: flex;
   color: ${Colors.whiteFont};
@@ -48,16 +48,16 @@ export const Header = styled.header`
   }
 
   .logo {
-    height: 60px;
-    width: 60px;
+    height: 100px;
+    width: 100px;
     margin-top: auto;
     margin-bottom: auto;
     margin-left: 20px;
     border-radius: 50%;
     cursor: pointer;
     img {
-      height: 60px;
-      width: 60px;
+      height: 100px;
+      width: 100px;
     }
 
     @media (max-width: 800px) {
