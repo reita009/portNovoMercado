@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Colors from "../../../components/Colors";
 
 export const Section_1 = styled.section`
-  height: 800px;
+  height: 1300px;
   width: 100hw;
   display: flex;
   flex-direction: column;
@@ -27,12 +27,19 @@ export const Section_1 = styled.section`
     .welcome {
       width: 400px;
       height: 300px;
-      margin-top: 160px;
+      margin-top: 100px;
       margin-left: 115px;
       @media (max-width: 801px) {
         margin-left: auto;
         margin-right: auto;
-        width: 300px;
+        width: 100%;
+        text-align: center;
+      }
+
+      .btn-group {
+        display: flex;
+        margin-top: 12px;
+        justify-content: space-around;
       }
 
       h1 {
@@ -57,7 +64,8 @@ export const Section_1 = styled.section`
     width: 50%;
     margin-top: 100px;
     @media (max-width: 801px) {
-      height: 40%;
+      margin-top: 30px;
+      height: 80%;
       width: 100%;
       background-color: ${Colors.blackBg};
     }
@@ -66,8 +74,9 @@ export const Section_1 = styled.section`
       height: 350px;
       width: 350px;
       border-radius: 50%;
+      background-size: cover;
       margin-left: auto;
-      margin-right: auto;
+      margin-right: 150px;
       clip-path: polygon(
         20% 0%,
         80% 0%,
@@ -78,6 +87,12 @@ export const Section_1 = styled.section`
         0% 80%,
         0% 20%
       );
+
+      @media (max-width: 801px) {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
       img {
         height: 350px;
         width: 350px;
@@ -91,6 +106,12 @@ export const Section_1 = styled.section`
           0% 80%,
           0% 20%
         );
+
+        @media (max-width: 801px) {
+          margin-top: 40px;
+          margin-left: auto;
+          margin-right: auto;
+        }
         //box-shadow: 4px 7px 9px 5px rgba(30, 144, 255, 1);
       }
     }
@@ -99,6 +120,7 @@ export const Section_1 = styled.section`
     width: 100vw;
     height: 40%;
     display: flex;
+
     @media (max-width: 801px) {
       background-color: ${Colors.blackBg};
     }

@@ -76,12 +76,13 @@ export const Header = styled.header`
   }
   .btn-group {
     width: 400px;
+    margin-right: 80px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     button {
-      margin-right: 5px;
-      margin-left: 5px;
+      margin-right: 10px;
+      margin-left: 10px;
     }
 
     @media (max-width: 800px) {

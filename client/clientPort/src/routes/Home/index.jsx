@@ -1,13 +1,75 @@
+//components
 import * as C from "./Container/style.js";
 import * as ComponentHeader from "./Header/style.js";
 import * as ComponentSection from "./Section_1/style.js";
+import * as ComponentSection2 from "./Section_2/style.js";
+import * as ComponentSection3 from "./Section_3/style.js";
+import * as B from "../../components/Buttons.js";
+//fotos
 import LogoReact from "../../assets/react-icon2.png";
 import LogoMobile from "../../assets/icon-mobile.gif";
 import foto from "../../assets/perfil-image.jpg";
-import * as B from "../../components/Buttons.js";
-import { useState } from "react";
+//LogoSkill
+import Js from "../../assets/skills/icon-js.png";
+import Php from "../../assets/skills/icon-php.png";
+import Node from "../../assets/skills/icon-node.png";
+import Html from "../../assets/skills/icon-html.png";
+import Css from "../../assets/skills/icon-css.png";
+import Tailwind from "../../assets/skills/icon-tailwind.png";
+import Bootstrap from "../../assets/skills/icon-bootstrap.png";
+import Github from "../../assets/skills/icon-github.png";
+import StyledComponent from "../../assets/skills/icon-styled-component.png";
+import React from "../../assets/skills/icon-react.png";
+import ReactNative from "../../assets/skills/icon-react-native.png";
+import Python from "../../assets/skills/icon-python.png";
+import Vite from "../../assets/skills/icon-vite.png";
+import Mysql from "../../assets/skills/icon-mysql.png";
+import Postgre from "../../assets/skills/icon-postgre.png";
+//ferramentas
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useState, useLayoutEffect } from "react";
 
 export const Home = () => {
+  //LayoutEffect
+  useLayoutEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.to(".card-skill", {
+      x: 0,
+      opacity: 1,
+      scrollTrigger: {
+        trigger: ".section_2",
+        //markers: true,
+        start: "top 400px",
+        end: "bottom 1300px",
+        scrub: true,
+      },
+    });
+
+    return () => {
+      gsap.killTweensOf(".card-skill");
+    };
+  }, []);
+
+  useLayoutEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.to(".project-area", {
+      x: 0,
+      opacity: 1,
+      scrollTrigger: {
+        trigger: ".section_3",
+        markers: true,
+        start: "top 400px",
+        end: "bottom 1400px",
+        scrub: true,
+      },
+    });
+
+    return () => {
+      gsap.killTweensOf(".card-skill");
+    };
+  }, []);
+
   //states
   const [mobile, setmobile] = useState("");
 
@@ -53,17 +115,21 @@ export const Home = () => {
             </ComponentHeader.BtnGroupMobile>
           </div>
           <div className="btn-group">
-            <B.Rainbow>
-              <button className="button-85" role="button">
+            <B.BtnWelcome>
+              <button className="button-86" role="button">
                 Skills
               </button>
-              <button className="button-85" role="button">
+            </B.BtnWelcome>
+            <B.BtnWelcome>
+              <button className="button-86" role="button">
                 Contatos
               </button>
-              <button className="button-85" role="button">
+            </B.BtnWelcome>
+            <B.BtnWelcome>
+              <button className="button-86" role="button">
                 Sobre
               </button>
-            </B.Rainbow>
+            </B.BtnWelcome>
           </div>
         </ComponentHeader.Header>
         <ComponentSection.Section_1>
@@ -73,6 +139,18 @@ export const Home = () => {
                 <h1>Olá, eu sou o</h1>
                 <span>Julio Santana :)</span>
                 <p>Desenvolvedor Full-stack</p>
+                <div className="btn-group">
+                  <B.Rainbow>
+                    <button className="button-85" role="button">
+                      Download CV
+                    </button>
+                  </B.Rainbow>
+                  <B.Rainbow>
+                    <button className="button-85" role="button">
+                      Entrar em contato
+                    </button>
+                  </B.Rainbow>
+                </div>
               </div>
             </section>
             <section className="right">
@@ -96,6 +174,104 @@ export const Home = () => {
             </div>
           </section>
         </ComponentSection.Section_1>
+
+        <ComponentSection2.Section_2 className="section_2">
+          <div className="skill-area">
+            <h1>Habilidades</h1>
+            <div className="card-group">
+              <div className="card-skill">
+                <span>JavaScript</span>
+                <img src={Js} alt="" />
+              </div>
+              <div className="card-skill">
+                <span>PHP</span>
+                <img src={Php} alt="" />
+              </div>
+              <div className="card-skill">
+                <span>NodeJS</span>
+                <img src={Node} alt="" />
+              </div>
+              <div className="card-skill">
+                <span>HTML</span>
+                <img src={Html} alt="" />
+              </div>
+              <div className="card-skill">
+                <span>CSS</span>
+                <img src={Css} alt="" />
+              </div>
+              <div className="card-skill">
+                <span>TAILWIND</span>
+                <img src={Tailwind} alt="" />
+              </div>
+              <div className="card-skill">
+                <span>Bootstrap</span>
+                <img src={Bootstrap} alt="" />
+              </div>
+              <div className="card-skill">
+                <span>Styled-Component</span>
+                <img src={StyledComponent} alt="" />
+              </div>
+              <div className="card-skill">
+                <span>GitHub</span>
+                <img src={Github} alt="" />
+              </div>
+              <div className="card-skill">
+                <span>React-Js</span>
+                <img src={React} alt="" />
+              </div>
+              <div className="card-skill">
+                <span>React-native</span>
+                <img src={ReactNative} alt="" />
+              </div>
+              <div className="card-skill">
+                <span>Vite</span>
+                <img src={Vite} alt="" />
+              </div>
+              <div className="card-skill">
+                <span>Python</span>
+                <img src={Python} alt="" />
+              </div>
+              <div className="card-skill">
+                <span>Mysql</span>
+                <img src={Mysql} alt="" />
+              </div>
+              <div className="card-skill">
+                <span>Postgre</span>
+                <img src={Postgre} alt="" />
+              </div>
+            </div>
+          </div>
+        </ComponentSection2.Section_2>
+
+        <ComponentSection3.Section_3 className="section_3">
+          <div className="title">
+            <h1>Projetos</h1>
+          </div>
+
+          <div className="project">
+            <div className="title-project">
+              <h3>Destaques</h3>
+            </div>
+            <div className="project-area">
+              <div className="project-card">
+                <div className="gradient-effect"></div>
+                <div className="content-project">
+                  <div className="name-project">
+                    <span>exemplo</span>
+                  </div>
+                  <div className="tec-project">
+                    <img src={Node} alt="" />
+                    <img src={React} alt="" />
+                    <img src={Html} alt="" />
+                    <img src={Css} alt="" />
+                  </div>
+                </div>
+              </div>
+              <div className="project-card">2</div>
+              <div className="project-card">3</div>
+            </div>
+          </div>
+        </ComponentSection3.Section_3>
       </C.Container>
     </>
   );

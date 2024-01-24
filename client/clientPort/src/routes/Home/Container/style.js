@@ -7,7 +7,4 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   background-color: ${Colors.blackBg};
-  @media (max-width: 801px) {
-    overflow-x: hidden;
-  }
 `;
