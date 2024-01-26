@@ -5,6 +5,7 @@ import * as ComponentSection from "./Section_1/style.js";
 import * as ComponentSection2 from "./Section_2/style.js";
 import * as ComponentSection3 from "./Section_3/style.js";
 import * as B from "../../components/Buttons.js";
+import * as M from "../../components/Modal.js";
 //fotos
 import LogoReact from "../../assets/react-icon2.png";
 import LogoMobile from "../../assets/icon-mobile.gif";
@@ -72,7 +73,7 @@ export const Home = () => {
 
   //states
   const [mobile, setmobile] = useState("");
-
+  const [showModal, setShowModal] = useState(false);
   //Functions
   const menuMobile = () => {
     if (mobile == "") {
@@ -81,57 +82,66 @@ export const Home = () => {
       setmobile("");
     }
   };
+  const modalActive = () => {
+    if (showModal == true) {
+      setShowModal(false);
+    } else if (showModal == false) {
+      setShowModal(true);
+    }
+  };
 
   return (
     <>
-      <C.Container>
-        <ComponentHeader.Header size={mobile}>
-          <div className="logo">
-            <img src={LogoReact} alt="" />
+      {showModal && <M.Modal onClick={modalActive}></M.Modal>}
+      <ComponentHeader.Header size={mobile}>
+        <div className="logo">
+          <img src={LogoReact} alt="" />
+        </div>
+        <div className="title">
+          <h1>Portfólio</h1>
+        </div>
+
+        <div className="menu-mobile">
+          <div className="logo-mobile">
+            <img src={LogoMobile} alt="" onClick={menuMobile} />
           </div>
-          <div className="title">
+          <div className="title-mobile">
             <h1>Portfólio</h1>
           </div>
-
-          <div className="menu-mobile">
-            <div className="logo-mobile">
-              <img src={LogoMobile} alt="" onClick={menuMobile} />
-            </div>
-            <div className="title-mobile">
-              <h1>Portfólio</h1>
-            </div>
-            <ComponentHeader.BtnGroupMobile size={mobile}>
-              <B.Rainbow>
-                <button className="button-85" role="button">
-                  Skills
-                </button>
-                <button className="button-85" role="button">
-                  Contatos
-                </button>
-                <button className="button-85" role="button">
-                  Sobre
-                </button>
-              </B.Rainbow>
-            </ComponentHeader.BtnGroupMobile>
-          </div>
-          <div className="btn-group">
-            <B.BtnWelcome>
-              <button className="button-86" role="button">
+          <ComponentHeader.BtnGroupMobile size={mobile}>
+            <B.Rainbow>
+              <button className="button-85" role="button">
                 Skills
               </button>
-            </B.BtnWelcome>
-            <B.BtnWelcome>
-              <button className="button-86" role="button">
+              <button className="button-85" role="button">
                 Contatos
               </button>
-            </B.BtnWelcome>
-            <B.BtnWelcome>
-              <button className="button-86" role="button">
+              <button className="button-85" role="button">
                 Sobre
               </button>
-            </B.BtnWelcome>
-          </div>
-        </ComponentHeader.Header>
+            </B.Rainbow>
+          </ComponentHeader.BtnGroupMobile>
+        </div>
+        <div className="btn-group">
+          <B.BtnWelcome>
+            <button className="button-86" role="button">
+              Skills
+            </button>
+          </B.BtnWelcome>
+          <B.BtnWelcome>
+            <button className="button-86" role="button">
+              Contatos
+            </button>
+          </B.BtnWelcome>
+          <B.BtnWelcome>
+            <button className="button-86" role="button">
+              Sobre
+            </button>
+          </B.BtnWelcome>
+        </div>
+      </ComponentHeader.Header>
+
+      <C.Container>
         <ComponentSection.Section_1>
           <div className="sectionWarp">
             <section className="left">
@@ -253,7 +263,7 @@ export const Home = () => {
               <h3>Destaques</h3>
             </div>
             <div className="project-area">
-              <div className="project-card">
+              <div className="project-card" onClick={modalActive}>
                 <div className="gradient-effect"></div>
                 <div className="content-project">
                   <div className="name-project">

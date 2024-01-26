@@ -2,8 +2,7 @@ import styled from "styled-components";
 import Colors from "../../../components/Colors";
 
 export const Section_1 = styled.section`
-  height: 1300px;
-  width: 100hw;
+  width: 100%;
   display: flex;
   flex-direction: column;
 
@@ -117,7 +116,6 @@ export const Section_1 = styled.section`
     }
   }
   .section-footer {
-    width: 100vw;
     height: 40%;
     display: flex;
 

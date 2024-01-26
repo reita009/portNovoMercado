@@ -4,16 +4,23 @@ import Colors from "../../../components/Colors";
 export const Section_3 = styled.section`
   height: 9000px;
   width: 100%;
-  padding-bottom: 120px;
   display: flex;
   flex-direction: column;
   background-color: ${Colors.blackBg};
 
   @media (max-width: 1668px) {
-    padding-bottom: 700px;
+    //padding-bottom: 700px;
   }
   @media (max-width: 400px) {
     padding-bottom: 700px;
+  }
+  .modal {
+    background-color: gray;
+    opacity: 0.8;
+    height: 8000px;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
   }
 
   .title {

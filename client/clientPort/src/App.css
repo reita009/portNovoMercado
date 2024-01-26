@@ -5,4 +5,14 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
+
+  ::-webkit-scrollbar {
+    height: 4px;
+    width: 5px;
+    background: #2c3e50;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #7f8c8d;
+    border-radius: 5px;
+  }
 }

@@ -3,10 +3,11 @@ import Colors from "../../../components/Colors.js";
 
 export const Header = styled.header`
   height: ${(props) => (props.size === "big" ? "300px" : "120px")};
-  width: 100%;
+  width: 100vw;
   display: flex;
   color: ${Colors.whiteFont};
   border-bottom: ${Colors.blue} 2px solid;
+  background-color: ${Colors.blackBg};
 
   .menu-mobile {
     margin-left: auto;
