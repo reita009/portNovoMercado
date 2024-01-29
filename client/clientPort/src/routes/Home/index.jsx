@@ -93,6 +93,58 @@ export const Home = () => {
   return (
     <>
       {showModal && <M.Modal onClick={modalActive}></M.Modal>}
+      {showModal && (
+        <M.CardModal>
+          <div className="cardContent">
+            <div className="left">
+              <div className="video">Video</div>
+            </div>
+            <div className="right">
+              <div className="title">
+                <h1>Titulo</h1>
+                <span onClick={modalActive}>X</span>
+              </div>
+              <p>
+                Searched destroying selfish Gandalf fisherman? May the blessings
+                of Elves and Men and all Free Folk go with you. Disband
+                achieving unleashed Ered rolling writing fool's forbids dressed
+                club greater poisoned. Hole lair months deep pledged Bilbo
+                Baggins. Searched destroying selfish Gandalf fisherman? May the
+                blessings of Elves and Men and all Free Folk go with you.
+                Disband achieving unleashed Ered rolling writing fool's forbids
+                dressed club greater poisoned. Hole lair months deep pledged
+                Bilbo Baggins. Searched destroying selfish Gandalf fisherman?
+                May the blessings of Elves and Men and all Free Folk go with
+                you. Disband achieving unleashed Ered rolling writing fool's
+                forbids dressed club greater poisoned. Hole lair months deep
+                pledged Bilbo Baggins. Searched destroying selfish Gandalf
+                fisherman? May the blessings of Elves and Men and all Free Folk
+                go with you. Disband achieving unleashed Ered rolling writing
+                fool's forbids dressed club greater poisoned. Hole lair months
+                deep pledged Bilbo Baggins.
+              </p>
+              <span>17 de Março de 2022</span>
+            </div>
+          </div>
+          <div className="footer">
+            <B.BtnCardModal>
+              <button className="button-63" role="button">
+                Acessar projeto
+              </button>
+            </B.BtnCardModal>
+            <B.BtnCardModal>
+              <button className="button-63" role="button">
+                Acessar repositório
+              </button>
+            </B.BtnCardModal>
+            <B.BtnCardModal>
+              <button className="button-63" role="button">
+                Ver post no linkedin
+              </button>
+            </B.BtnCardModal>
+          </div>
+        </M.CardModal>
+      )}
       <ComponentHeader.Header size={mobile}>
         <div className="logo">
           <img src={LogoReact} alt="" />
@@ -140,7 +192,6 @@ export const Home = () => {
           </B.BtnWelcome>
         </div>
       </ComponentHeader.Header>
-
       <C.Container>
         <ComponentSection.Section_1>
           <div className="sectionWarp">
