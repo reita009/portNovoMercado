@@ -1,15 +1,22 @@
 //components
 import * as C from "./Container/style.js";
-import * as ComponentHeader from "./Header/style.js";
+import * as ComponentHeader from "../../components/Header/style.js";
 import * as ComponentSection from "./Section_1/style.js";
 import * as ComponentSection2 from "./Section_2/style.js";
 import * as ComponentSection3 from "./Section_3/style.js";
+import * as F from "./Footer/style.js";
 import * as B from "../../components/Buttons.js";
 import * as M from "../../components/Modal.js";
 //fotos
 import LogoReact from "../../assets/react-icon2.png";
 import LogoMobile from "../../assets/icon-mobile.gif";
 import foto from "../../assets/perfil-image.jpg";
+import FigureFooter from "../../assets/FigureFooter.gif";
+//contact Logo
+import ContactGitHub from "../../assets/Contact/github.gif";
+import ContactEmail from "../../assets/Contact/e-mail.gif";
+import ContactLinkedin from "../../assets/Contact/linkedin.gif";
+import ContactPhone from "../../assets/Contact/phone.gif";
 //LogoSkill
 import Js from "../../assets/skills/icon-js.png";
 import Php from "../../assets/skills/icon-php.png";
@@ -30,6 +37,7 @@ import Postgre from "../../assets/skills/icon-postgre.png";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useState, useLayoutEffect } from "react";
+import { Link } from "react-router-dom";
 
 export const Home = () => {
   //LayoutEffect
@@ -59,7 +67,7 @@ export const Home = () => {
       opacity: 1,
       scrollTrigger: {
         trigger: ".section_3",
-        markers: true,
+        //markers: true,
         start: "top 400px",
         end: "bottom 1400px",
         scrub: true,
@@ -123,7 +131,7 @@ export const Home = () => {
                 fool's forbids dressed club greater poisoned. Hole lair months
                 deep pledged Bilbo Baggins.
               </p>
-              <span>17 de Março de 2022</span>
+              <span className="date">17 de Março de 2022</span>
             </div>
           </div>
           <div className="footer">
@@ -146,9 +154,11 @@ export const Home = () => {
         </M.CardModal>
       )}
       <ComponentHeader.Header size={mobile}>
-        <div className="logo">
-          <img src={LogoReact} alt="" />
-        </div>
+        <Link to={"/"}>
+          <div className="logo">
+            <img src={LogoReact} alt="" />
+          </div>
+        </Link>
         <div className="title">
           <h1>Portfólio</h1>
         </div>
@@ -166,7 +176,7 @@ export const Home = () => {
                 Skills
               </button>
               <button className="button-85" role="button">
-                Contatos
+                <Link to={"contato"}>Contatos</Link>
               </button>
               <button className="button-85" role="button">
                 Sobre
@@ -181,9 +191,11 @@ export const Home = () => {
             </button>
           </B.BtnWelcome>
           <B.BtnWelcome>
-            <button className="button-86" role="button">
-              Contatos
-            </button>
+            <Link to={"/contato"}>
+              <button className="button-86" role="button">
+                Contatos
+              </button>
+            </Link>
           </B.BtnWelcome>
           <B.BtnWelcome>
             <button className="button-86" role="button">
@@ -328,12 +340,84 @@ export const Home = () => {
                   </div>
                 </div>
               </div>
-              <div className="project-card">2</div>
-              <div className="project-card">3</div>
+              <div className="project-card">
+                <div className="gradient-effect"></div>
+                <div className="content-project">
+                  <div className="name-project">
+                    <span>exemplo</span>
+                  </div>
+                  <div className="tec-project">
+                    <img src={Node} alt="" />
+                    <img src={React} alt="" />
+                    <img src={Html} alt="" />
+                    <img src={Css} alt="" />
+                  </div>
+                </div>
+              </div>
+              <div className="project-card">
+                <div className="gradient-effect"></div>
+                <div className="content-project">
+                  <div className="name-project">
+                    <span>exemplo</span>
+                  </div>
+                  <div className="tec-project">
+                    <img src={Node} alt="" />
+                    <img src={React} alt="" />
+                    <img src={Html} alt="" />
+                    <img src={Css} alt="" />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </ComponentSection3.Section_3>
       </C.Container>
+      <F.Footer>
+        <div className="left">
+          <img src={FigureFooter} alt="" />
+        </div>
+        <div className="right">
+          <div className="contactGroup">
+            <div className="contact-card">
+              <Link
+                to={"mailto:julio.dev.santana@gmail.com"}
+                className="img-whrap"
+              >
+                <img src={ContactEmail} alt="" />
+              </Link>
+              <span>E-mail</span>
+              <p>julio.dev.santana@gmail.com</p>
+            </div>
+
+            <div className="contact-card">
+              <Link to={"https://wa.me/5513996844641"} className="img-whrap">
+                <img src={ContactPhone} alt="" />
+              </Link>
+              <span>Telefone</span>
+              <p>(13) 996844641</p>
+            </div>
+
+            <div className="contact-card">
+              <Link
+                to={"https://www.linkedin.com/in/julio-cesar-santana/"}
+                className="img-whrap"
+              >
+                <img src={ContactLinkedin} alt="" />
+              </Link>
+              <span>Linkedin</span>
+              <p>@julio santana</p>
+            </div>
+
+            <div className="contact-card">
+              <Link to={"https://github.com/reita009"} className="img-whrap">
+                <img src={ContactGitHub} alt="" />
+              </Link>
+              <span>GitHub</span>
+              <p>@reita009</p>
+            </div>
+          </div>
+        </div>
+      </F.Footer>
     </>
   );
 };

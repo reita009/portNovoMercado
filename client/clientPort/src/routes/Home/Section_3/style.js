@@ -101,7 +101,7 @@ export const Section_3 = styled.section`
           margin-left: auto;
           margin-right: auto;
         }
-
+        margin-top: 20px;
         width: 500px;
         height: 300px;
         background-color: #13131f;

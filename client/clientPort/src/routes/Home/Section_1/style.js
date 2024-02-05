@@ -75,7 +75,7 @@ export const Section_1 = styled.section`
       border-radius: 50%;
       background-size: cover;
       margin-left: auto;
-      margin-right: 150px;
+      //margin-right: 150px;
       clip-path: polygon(
         20% 0%,
         80% 0%,

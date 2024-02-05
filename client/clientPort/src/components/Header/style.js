@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Colors from "../../../components/Colors.js";
+import Colors from "../Colors.js";
 
 export const Header = styled.header`
   height: ${(props) => (props.size === "big" ? "300px" : "120px")};
@@ -81,6 +81,11 @@ export const Header = styled.header`
     display: flex;
     justify-content: space-around;
     align-items: center;
+
+    a {
+      text-decoration: none;
+    }
+
     button {
       margin-right: 10px;
       margin-left: 10px;
@@ -114,6 +119,11 @@ export const BtnGroupMobile = styled.div`
     flex-direction: column;
     width: 100%;
     align-items: center;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
   }
   button {
     width: 80%;

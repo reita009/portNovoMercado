@@ -4,8 +4,8 @@ import Colors from "../../../components/Colors";
 export const Container = styled.div`
   height: 2600px;
   width: 100vw;
-  padding-left: 15%;
-  padding-right: 15%;
+  padding-left: 8%;
+  padding-right: 8%;
   display: flex;
   flex-direction: column;
   background-color: ${Colors.blackBg};

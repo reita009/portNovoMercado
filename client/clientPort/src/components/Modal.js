@@ -28,8 +28,20 @@ export const CardModal = styled.div`
   display: flex;
   flex-direction: column;
 
+  @media (max-width: 1600px) {
+  }
+  @media (max-width: 1340px) {
+    overflow-y: auto;
+  }
+
   .cardContent {
     display: flex;
+    @media (max-width: 1340px) {
+      flex-direction: column;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
     div {
       width: 50%;
@@ -40,12 +52,30 @@ export const CardModal = styled.div`
         background-color: red;
         height: 350px;
         width: 580px;
+        @media (max-width: 1600px) {
+          height: 300px;
+          width: 500px;
+        }
+        @media (max-width: 820px) {
+          height: 250px;
+          width: 280px;
+        }
       }
     }
     .right {
+      @media (max-width: 820px) {
+        height: 600px;
+        width: 100%;
+      }
+
       .title {
         width: 100%;
         display: flex;
+
+        @media (max-width: 1600px) {
+          margin-top: 30px;
+        }
+
         h1 {
           color: ${Colors.blue};
         }
@@ -56,12 +86,26 @@ export const CardModal = styled.div`
         }
         margin-bottom: 20px;
       }
+
       p {
         width: 600px;
         color: ${Colors.grayFont};
         margin-bottom: 20px;
+        @media (max-width: 1600px) {
+          width: 500px;
+        }
+        @media (max-width: 820px) {
+          height: 250px;
+          width: 80%;
+          font-size: 12px;
+          margin-bottom: 300px;
+        }
       }
       span {
+        color: ${Colors.blue};
+        font-size: 17px;
+      }
+      .date {
         color: ${Colors.blue};
         font-size: 17px;
       }
@@ -74,10 +118,19 @@ export const CardModal = styled.div`
     margin-top: 80px;
     display: flex;
 
+    @media (max-width: 820px) {
+      flex-direction: column;
+    }
+
     button {
       height: 15px;
       font-size: 13px;
       margin-right: 20px;
+      @media (max-width: 820px) {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        width: 90%;
+      }
     }
   }
 `;
