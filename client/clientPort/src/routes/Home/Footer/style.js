@@ -81,7 +81,7 @@ export const Footer = styled.footer`
         }
         p {
           margin-top: 8px;
-          color: #576574;
+          color: white;
           font-size: 15px;
           margin-left: auto;
           margin-right: auto;

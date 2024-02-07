@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Colors from "../Colors.js";
 
 export const Header = styled.header`
-  height: ${(props) => (props.size === "big" ? "300px" : "120px")};
+  height: ${(props) => (props.size === "big" ? "380px" : "120px")};
   width: 100vw;
   display: flex;
   color: ${Colors.whiteFont};

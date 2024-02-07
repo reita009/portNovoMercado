@@ -176,7 +176,7 @@ export const Home = () => {
                 Skills
               </button>
               <button className="button-85" role="button">
-                <Link to={"contato"}>Contatos</Link>
+                <Link to={"/contato"}>Contatos</Link>
               </button>
               <button className="button-85" role="button">
                 Sobre
