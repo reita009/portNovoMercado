@@ -14,12 +14,16 @@ export const Container = styled.div`
     position: absolute;
     width: 600px;
     right: 0px;
-    height: 100vh;
+    height: 600px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     z-index: 1;
     padding-top: 0%;
+
+    @media (max-width: 1200px) {
+      width: 200px;
+    }
 
     .error-msn {
       margin-left: auto;

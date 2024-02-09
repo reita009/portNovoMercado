@@ -27,6 +27,8 @@ export const Contact = () => {
   //Variaveis
   const alertRefName = useRef(null);
   const alertRefEmail = useRef(null);
+  const alertRefSubject = useRef(null);
+  const alertRefMessager = useRef(null);
 
   //HookForm
   const {
@@ -38,6 +40,9 @@ export const Contact = () => {
   useEffect(() => {
     const alertName = alertRefName.current;
     const alertEmail = alertRefEmail.current;
+    const alertSubject = alertRefSubject.current;
+    const alertMessager = alertRefMessager.current;
+
     if (/*Object.keys(errors).length > 0*/ errors.name?.type === "required") {
       gsap.fromTo(
         alertName,
@@ -55,6 +60,40 @@ export const Contact = () => {
     if (/*Object.keys(errors).length > 0*/ errors.email?.type === "required") {
       gsap.fromTo(
         alertEmail,
+        {
+          opacity: 0,
+          x: 300,
+        },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 1,
+        }
+      );
+    }
+
+    if (
+      /*Object.keys(errors).length > 0*/ errors.subject?.type === "required"
+    ) {
+      gsap.fromTo(
+        alertSubject,
+        {
+          opacity: 0,
+          x: 300,
+        },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 1,
+        }
+      );
+    }
+
+    if (
+      /*Object.keys(errors).length > 0*/ errors.messager?.type === "required"
+    ) {
+      gsap.fromTo(
+        alertMessager,
         {
           opacity: 0,
           x: 300,
@@ -158,6 +197,24 @@ export const Contact = () => {
           >
             <p>campo E-mail obrigatório!</p>
           </ComponentContainer.Alert>
+
+          <ComponentContainer.Alert
+            className="alert alert-warning error-msn"
+            role="alert"
+            ref={alertRefSubject}
+            isHidden={errors.subject?.type === "required"}
+          >
+            <p>campo assunto obrigatório!</p>
+          </ComponentContainer.Alert>
+
+          <ComponentContainer.Alert
+            className="alert alert-warning error-msn"
+            role="alert"
+            ref={alertRefMessager}
+            isHidden={errors.messager?.type === "required"}
+          >
+            <p>campo assunto obrigatório!</p>
+          </ComponentContainer.Alert>
         </div>
 
         <div className="left ">
@@ -196,7 +253,7 @@ export const Contact = () => {
               </div>
 
               <div className="mb-3 input-area">
-                <label className="form-label">E-mail:</label>
+                <label className="form-label">Mensagem:</label>
                 <textarea
                   {...register("messager", {
                     required: true,
