@@ -16,7 +16,7 @@ export const Modal = styled.div`
 
 export const CardModal = styled.div`
   background-color: ${Colors.hardBlue};
-  height: 65%;
+  height: 70%;
   width: 75%;
   top: 18%;
   left: 10%;
@@ -32,6 +32,69 @@ export const CardModal = styled.div`
   }
   @media (max-width: 1340px) {
     overflow-y: auto;
+  }
+
+  .button-63 {
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
+
+  .congratilations {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    h1 {
+      color: ${Colors.blue};
+      font-size: 80px;
+    }
+    p {
+      font-size: 25px;
+      color: ${Colors.grayFont};
+    }
+  }
+  .gif {
+    display: flex;
+
+    .gif-whrap {
+      display: flex;
+      margin-left: auto;
+      margin-right: auto;
+
+      img {
+        height: 200px;
+        border-radius: 15px;
+      }
+      h1 {
+        color: gold;
+        font-size: 130px;
+        margin-left: 60px;
+      }
+    }
+  }
+  .favorite-area {
+    width: 100%;
+    margin-top: 17px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+      color: ${Colors.grayFont};
+    }
+
+    .favoriteStar {
+      justify-content: center;
+      display: flex;
+
+      .star {
+        cursor: pointer;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+    }
   }
 
   .cardContent {

@@ -6,6 +6,7 @@ const Colors = {
   grayFont: "#dfe4ea",
   hardBlue: "#13131f",
   blueBg: "#54a0ff",
+  blueLigth: "#81ecec",
 };
 
 export default Colors;
