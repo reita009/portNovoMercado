@@ -25,6 +25,12 @@ import Logic3 from "../../assets/paginaSkill/logic/logic3.png";
 import Logic4 from "../../assets/paginaSkill/logic/logic4.png";
 import html from "../../assets/paginaSkill/markup/html.png";
 import css from "../../assets/paginaSkill/markup/css.png";
+import bootstrap from "../../assets/paginaSkill/markup/bootstrap.png";
+import styled from "../../assets/paginaSkill/markup/styled.png";
+import ReactJS from "../../assets/paginaSkill/frontend/ReactJS.png";
+import Angular from "../../assets/paginaSkill/frontend/Angular.png";
+import Ejs from "../../assets/paginaSkill/frontend/Ejs.png";
+import NextJS from "../../assets/paginaSkill/frontend/NextJS.png";
 
 import { Link } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
@@ -178,8 +184,9 @@ export const Skills = () => {
             <div className="content">
               <span>HTML</span>
               <p>
-                Conhecimento sólido em lógica de programação, com total
-                eficiência no uso de variáveis, funções, loops, listas
+                Conhecimento sólido e bem organizado de páginas web é
+                fundamental. Tendo total conhecimento de todas as tags e
+                frameworks para montar um sistema robusto
               </p>
             </div>
           </div>
@@ -191,8 +198,149 @@ export const Skills = () => {
             <div className="content">
               <span>CSS</span>
               <p>
-                Conhecimento sólido em lógica de programação, com total
-                eficiência no uso de variáveis, funções, loops, listas
+                Tenho conhecimento avançado em CSS, tendo total conhecimento da
+                linguagem de estilo e suas respectivas ferramentas, além de um
+                certo conhecimento avançado para animações.
+              </p>
+            </div>
+          </div>
+
+          <div className="card">
+            <div className="logo">
+              <img src={bootstrap} alt="" />
+            </div>
+            <div className="content">
+              <span>Bootstrap</span>
+              <p>
+                Conhecimento total sobre a ferramenta de estilo e todas as suas
+                respectivas classes.
+              </p>
+            </div>
+          </div>
+
+          <div className="card">
+            <div className="logo">
+              <img src={styled} alt="" />
+            </div>
+            <div className="content">
+              <span>Styled-components</span>
+              <p>
+                Conhecimento total da ferramenta, de sua utilização na criação
+                de componentes e da conexão prévia com o CSS.
+              </p>
+            </div>
+          </div>
+        </ComponentContainer.SkillArea>
+        <div className="title">Frontend</div>
+        <ComponentContainer.SkillArea>
+          <div className="card">
+            <div className="logo">
+              <img src={ReactJS} alt="" />
+            </div>
+            <div className="content">
+              <span>React-Js</span>
+              <p>
+                Conhecimento total em ReactJS e suas respectivas bibliotecas,
+                conhecimento extremamente avançado em hooks, componentes
+                individuais e criação de single-page applications.
+              </p>
+            </div>
+          </div>
+
+          <div className="card">
+            <div className="logo">
+              <img src={Angular} alt="" />
+            </div>
+            <div className="content">
+              <span>Angular</span>
+              <p>
+                Conhecimento pleno da ferramenta, criação de app, uso de
+                property binding e de diversas diretivas.
+              </p>
+            </div>
+          </div>
+
+          <div className="card">
+            <div className="logo">
+              <img src={Ejs} alt="" />
+            </div>
+            <div className="content">
+              <span>EJS</span>
+              <p>
+                Achei uma ferramenta bem simples de se trabalhar, confesso que
+                não fui muito a fundo em conhecimento por achar um tanto
+                limitada, mas tenho conhecimento totalmente funcional.
+              </p>
+            </div>
+          </div>
+
+          <div className="card">
+            <div className="logo">
+              <img src={NextJS} alt="" />
+            </div>
+            <div className="content">
+              <span>Next-JS</span>
+              <p>
+                Tenho conhecimentos sólidos em consequência do meu leque de
+                conhecimento em ReactJS e NodeJS. Estou estudando a ferramenta e
+                me considero um usuário funcional.
+              </p>
+            </div>
+          </div>
+        </ComponentContainer.SkillArea>
+        <div className="title">Backend</div>
+        <ComponentContainer.SkillArea>
+          <div className="card">
+            <div className="logo">
+              <img src={ReactJS} alt="" />
+            </div>
+            <div className="content">
+              <span>React-Js</span>
+              <p>
+                Conhecimento total em ReactJS e suas respectivas bibliotecas,
+                conhecimento extremamente avançado em hooks, componentes
+                individuais e criação de single-page applications.
+              </p>
+            </div>
+          </div>
+
+          <div className="card">
+            <div className="logo">
+              <img src={Angular} alt="" />
+            </div>
+            <div className="content">
+              <span>Angular</span>
+              <p>
+                Conhecimento pleno da ferramenta, criação de app, uso de
+                property binding e de diversas diretivas.
+              </p>
+            </div>
+          </div>
+
+          <div className="card">
+            <div className="logo">
+              <img src={Ejs} alt="" />
+            </div>
+            <div className="content">
+              <span>EJS</span>
+              <p>
+                Achei uma ferramenta bem simples de se trabalhar, confesso que
+                não fui muito a fundo em conhecimento por achar um tanto
+                limitada, mas tenho conhecimento totalmente funcional.
+              </p>
+            </div>
+          </div>
+
+          <div className="card">
+            <div className="logo">
+              <img src={NextJS} alt="" />
+            </div>
+            <div className="content">
+              <span>Next-JS</span>
+              <p>
+                Tenho conhecimentos sólidos em consequência do meu leque de
+                conhecimento em ReactJS e NodeJS. Estou estudando a ferramenta e
+                me considero um usuário funcional.
               </p>
             </div>
           </div>
