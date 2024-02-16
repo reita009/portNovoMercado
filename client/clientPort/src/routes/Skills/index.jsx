@@ -31,6 +31,18 @@ import ReactJS from "../../assets/paginaSkill/frontend/ReactJS.png";
 import Angular from "../../assets/paginaSkill/frontend/Angular.png";
 import Ejs from "../../assets/paginaSkill/frontend/Ejs.png";
 import NextJS from "../../assets/paginaSkill/frontend/NextJS.png";
+import NodeJs from "../../assets/paginaSkill/backend/NodeJs.png";
+import Express from "../../assets/paginaSkill/backend/expressJS.png";
+import KnexJs from "../../assets/paginaSkill/backend/KnexJs.png";
+import Sequelize from "../../assets/paginaSkill/backend/Sequelize.png";
+import Mysql from "../../assets/paginaSkill/bancoDeDados/mysql.png";
+import Postgre from "../../assets/paginaSkill/bancoDeDados/postgre.png";
+import MongoDb from "../../assets/paginaSkill/bancoDeDados/mongodb.png";
+import ReactNative from "../../assets/paginaSkill/mobile/reactNative.png";
+import GitHub from "../../assets/paginaSkill/plataform/github.png";
+import GitLab from "../../assets/paginaSkill/plataform/gitlab.png";
+import NetliFy from "../../assets/paginaSkill/plataform/netlify.png";
+import Railway from "../../assets/paginaSkill/plataform/railway.png";
 
 import { Link } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
@@ -292,55 +304,169 @@ export const Skills = () => {
         <ComponentContainer.SkillArea>
           <div className="card">
             <div className="logo">
-              <img src={ReactJS} alt="" />
+              <img src={NodeJs} alt="" />
             </div>
             <div className="content">
-              <span>React-Js</span>
+              <span>NodeJs</span>
               <p>
-                Conhecimento total em ReactJS e suas respectivas bibliotecas,
-                conhecimento extremamente avançado em hooks, componentes
-                individuais e criação de single-page applications.
+                Total conhecimento da ferramenta de backend e suas respectivas
+                bibliotecas, conhecimento em lógica para criação de sistemas e
+                aplicativo backend usando Node.js.
               </p>
             </div>
           </div>
 
           <div className="card">
             <div className="logo">
-              <img src={Angular} alt="" />
+              <img src={Express} alt="" />
             </div>
             <div className="content">
-              <span>Angular</span>
+              <span>Express</span>
               <p>
-                Conhecimento pleno da ferramenta, criação de app, uso de
-                property binding e de diversas diretivas.
+                Conhecimento avançado da ferramenta no uso de rotas e criação de
+                servidores, e autoconhecimento na criação de API Rest
               </p>
             </div>
           </div>
 
           <div className="card">
             <div className="logo">
-              <img src={Ejs} alt="" />
+              <img src={Sequelize} alt="" />
             </div>
             <div className="content">
-              <span>EJS</span>
+              <span>Sequelize</span>
               <p>
-                Achei uma ferramenta bem simples de se trabalhar, confesso que
-                não fui muito a fundo em conhecimento por achar um tanto
-                limitada, mas tenho conhecimento totalmente funcional.
+                Pleno conhecimento da ferramenta de ORM, projetando aplicativos
+                com uma conexão sólida com bancos de dados como MySQL e
+                PostgreSQL.
               </p>
             </div>
           </div>
 
           <div className="card">
             <div className="logo">
-              <img src={NextJS} alt="" />
+              <img src={KnexJs} alt="" />
             </div>
             <div className="content">
-              <span>Next-JS</span>
+              <span>KnexJs</span>
               <p>
-                Tenho conhecimentos sólidos em consequência do meu leque de
-                conhecimento em ReactJS e NodeJS. Estou estudando a ferramenta e
-                me considero um usuário funcional.
+                Conhecimento total da ferramenta e consultas que facilitam a
+                conexão com os bancos de dados SQL.
+              </p>
+            </div>
+          </div>
+        </ComponentContainer.SkillArea>
+        <div className="title">Banco de dados</div>
+        <ComponentContainer.SkillArea>
+          <div className="card">
+            <div className="logo">
+              <img src={Mysql} alt="" />
+            </div>
+            <div className="content">
+              <span>Mysql</span>
+              <p>
+                Conhecimento total na tecnologia de banco de dados MySQL, em
+                criação de banco de dados, tabelas, etc
+              </p>
+            </div>
+          </div>
+
+          <div className="card">
+            <div className="logo">
+              <img src={Postgre} alt="" />
+            </div>
+            <div className="content">
+              <span>PostgreSql</span>
+              <p>
+                Conhecimento total na tecnologia de banco de dados Postgre, em
+                criação de banco de dados, tabelas, etc.
+              </p>
+            </div>
+          </div>
+
+          <div className="card">
+            <div className="logo">
+              <img src={MongoDb} alt="" />
+            </div>
+            <div className="content">
+              <span>MongoDb</span>
+              <p>
+                Conhecimento pleno na tecnologia de banco de dados não
+                relacional, conhecimento em conexão e criação de collections.
+              </p>
+            </div>
+          </div>
+        </ComponentContainer.SkillArea>
+        <div className="title">Mobile</div>
+        <ComponentContainer.SkillArea>
+          <div className="card">
+            <div className="logo">
+              <img src={ReactNative} alt="" />
+            </div>
+            <div className="content">
+              <span>ReactNative</span>
+              <p>
+                Conhecimento total na ferramenta mobile, conhecimento na criação
+                do aplicativo, autoconhecimento na criação de componentes e
+                deploy do app.
+              </p>
+            </div>
+          </div>
+        </ComponentContainer.SkillArea>
+        <div className="title">Plataformas e hospedagens</div>
+        <ComponentContainer.SkillArea>
+          <div className="card">
+            <div className="logo">
+              <img src={GitHub} alt="" />
+            </div>
+            <div className="content">
+              <span>GitHub</span>
+              <p>
+                Conhecimento total na ferramenta mobile, conhecimento na criação
+                do aplicativo, autoconhecimento na criação de componentes e
+                deploy do app.
+              </p>
+            </div>
+          </div>
+
+          <div className="card">
+            <div className="logo">
+              <img src={GitLab} alt="" />
+            </div>
+            <div className="content">
+              <span>GitLab</span>
+              <p>
+                Conhecimento total na ferramenta mobile, conhecimento na criação
+                do aplicativo, autoconhecimento na criação de componentes e
+                deploy do app.
+              </p>
+            </div>
+          </div>
+
+          <div className="card">
+            <div className="logo">
+              <img src={NetliFy} alt="" />
+            </div>
+            <div className="content">
+              <span>Netlify</span>
+              <p>
+                Conhecimento total na ferramenta mobile, conhecimento na criação
+                do aplicativo, autoconhecimento na criação de componentes e
+                deploy do app.
+              </p>
+            </div>
+          </div>
+
+          <div className="card">
+            <div className="logo">
+              <img src={Railway} alt="" />
+            </div>
+            <div className="content">
+              <span>Railway</span>
+              <p>
+                Conhecimento total na ferramenta mobile, conhecimento na criação
+                do aplicativo, autoconhecimento na criação de componentes e
+                deploy do app.
               </p>
             </div>
           </div>
