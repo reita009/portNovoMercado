@@ -1,12 +1,11 @@
 import styled from "styled-components";
-import Colors from "../../../components/Colors";
+import Colors from "../Colors";
 
 export const Footer = styled.footer`
   background-color: ${Colors.blueBg};
   height: 600px;
+  width: 100vw;
   display: flex;
-  padding-left: 5%;
-  padding-right: 5%;
 
   @media (max-width: 1155px) {
     flex-direction: column;

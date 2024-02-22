@@ -1,5 +1,6 @@
 //Components
-import * as ComponentHeader from "../../components/Header/style";
+import { Header } from "../../components/Header";
+import { Footer } from "../../components/Footer/index.jsx";
 import * as ComponentContainer from "./Container/style.js";
 import * as B from "../../components/Buttons.js";
 import * as M from "../../components/Modal.js";
@@ -382,64 +383,8 @@ export const Contact = () => {
           </B.BtnCardModal>
         </M.CardModal>
       )}
-      <ComponentHeader.Header>
-        <ComponentHeader.Header size={mobile}>
-          <Link to={"/"}>
-            <div className="logo">
-              <img src={LogoReact} alt="" />
-            </div>
-          </Link>
-          <div className="title">
-            <h1>Portfólio</h1>
-          </div>
+      <Header />
 
-          <div className="menu-mobile">
-            <div className="logo-mobile">
-              <img src={LogoMobile} alt="" onClick={menuMobile} />
-            </div>
-            <div className="title-mobile">
-              <h1>Portfólio</h1>
-            </div>
-            <ComponentHeader.BtnGroupMobile size={mobile}>
-              <B.Rainbow>
-                <button className="button-85" role="button">
-                  <Link to={"/"}> Home</Link>
-                </button>
-                <button className="button-85" role="button">
-                  <Link to={"/habilidades"}> Skills</Link>
-                </button>
-                <button className="button-85" role="button">
-                  <Link to={"contato"}>Contatos</Link>
-                </button>
-                <button className="button-85" role="button">
-                  Sobre
-                </button>
-              </B.Rainbow>
-            </ComponentHeader.BtnGroupMobile>
-          </div>
-          <div className="btn-group">
-            <B.BtnWelcome>
-              <Link to={"/habilidades"}>
-                <button className="button-86" role="button">
-                  Skills
-                </button>
-              </Link>
-            </B.BtnWelcome>
-            <B.BtnWelcome>
-              <Link to={"/contato"}>
-                <button className="button-86" role="button">
-                  Contatos
-                </button>
-              </Link>
-            </B.BtnWelcome>
-            <B.BtnWelcome>
-              <button className="button-86" role="button">
-                Sobre
-              </button>
-            </B.BtnWelcome>
-          </div>
-        </ComponentHeader.Header>
-      </ComponentHeader.Header>
       <ComponentContainer.Container actionmobile={mobile}>
         <div className="alert-error ">
           <ComponentContainer.Alert
@@ -541,6 +486,7 @@ export const Contact = () => {
           <img src={BrandComunication} alt="" />
         </div>
       </ComponentContainer.Container>
+      <Footer />
     </>
   );
 };

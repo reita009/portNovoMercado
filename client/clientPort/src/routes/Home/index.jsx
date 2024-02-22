@@ -1,15 +1,13 @@
 //components
 import * as C from "./Container/style.js";
-import * as ComponentHeader from "../../components/Header/style.js";
+import { Header } from "../../components/Header";
+import { Footer } from "../../components/Footer/index.jsx";
 import * as ComponentSection from "./Section_1/style.js";
 import * as ComponentSection2 from "./Section_2/style.js";
 import * as ComponentSection3 from "./Section_3/style.js";
-import * as F from "./Footer/style.js";
 import * as B from "../../components/Buttons.js";
 import * as M from "../../components/Modal.js";
 //fotos
-import LogoReact from "../../assets/react-icon2.png";
-import LogoMobile from "../../assets/icon-mobile.gif";
 import foto from "../../assets/perfil-image.jpg";
 import FigureFooter from "../../assets/FigureFooter.gif";
 //contact Logo
@@ -153,57 +151,7 @@ export const Home = () => {
           </div>
         </M.CardModal>
       )}
-      <ComponentHeader.Header size={mobile}>
-        <Link to={"/"}>
-          <div className="logo">
-            <img src={LogoReact} alt="" />
-          </div>
-        </Link>
-        <div className="title">
-          <h1>Portfólio</h1>
-        </div>
-
-        <div className="menu-mobile">
-          <div className="logo-mobile">
-            <img src={LogoMobile} alt="" onClick={menuMobile} />
-          </div>
-          <div className="title-mobile">
-            <h1>Portfólio</h1>
-          </div>
-          <ComponentHeader.BtnGroupMobile size={mobile}>
-            <B.Rainbow>
-              <button className="button-85" role="button">
-                Skills
-              </button>
-              <button className="button-85" role="button">
-                <Link to={"/contato"}>Contatos</Link>
-              </button>
-              <button className="button-85" role="button">
-                Sobre
-              </button>
-            </B.Rainbow>
-          </ComponentHeader.BtnGroupMobile>
-        </div>
-        <div className="btn-group">
-          <B.BtnWelcome>
-            <button className="button-86" role="button">
-              Skills
-            </button>
-          </B.BtnWelcome>
-          <B.BtnWelcome>
-            <Link to={"/contato"}>
-              <button className="button-86" role="button">
-                Contatos
-              </button>
-            </Link>
-          </B.BtnWelcome>
-          <B.BtnWelcome>
-            <button className="button-86" role="button">
-              Sobre
-            </button>
-          </B.BtnWelcome>
-        </div>
-      </ComponentHeader.Header>
+      <Header />
       <C.Container>
         <ComponentSection.Section_1>
           <div className="sectionWarp">
@@ -372,52 +320,7 @@ export const Home = () => {
           </div>
         </ComponentSection3.Section_3>
       </C.Container>
-      <F.Footer>
-        <div className="left">
-          <img src={FigureFooter} alt="" />
-        </div>
-        <div className="right">
-          <div className="contactGroup">
-            <div className="contact-card">
-              <Link
-                to={"mailto:julio.dev.santana@gmail.com"}
-                className="img-whrap"
-              >
-                <img src={ContactEmail} alt="" />
-              </Link>
-              <span>E-mail</span>
-              <p>julio.dev.santana@gmail.com</p>
-            </div>
-
-            <div className="contact-card">
-              <Link to={"https://wa.me/5513996844641"} className="img-whrap">
-                <img src={ContactPhone} alt="" />
-              </Link>
-              <span>Telefone</span>
-              <p>(13) 996844641</p>
-            </div>
-
-            <div className="contact-card">
-              <Link
-                to={"https://www.linkedin.com/in/julio-cesar-santana/"}
-                className="img-whrap"
-              >
-                <img src={ContactLinkedin} alt="" />
-              </Link>
-              <span>Linkedin</span>
-              <p>@julio santana</p>
-            </div>
-
-            <div className="contact-card">
-              <Link to={"https://github.com/reita009"} className="img-whrap">
-                <img src={ContactGitHub} alt="" />
-              </Link>
-              <span>GitHub</span>
-              <p>@reita009</p>
-            </div>
-          </div>
-        </div>
-      </F.Footer>
+      <Footer />
     </>
   );
 };

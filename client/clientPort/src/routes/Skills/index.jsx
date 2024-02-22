@@ -1,4 +1,5 @@
-import * as ComponentHeader from "../../components/Header/style";
+import { Header } from "../../components/Header";
+import { Footer } from "../../components/Footer/index.jsx";
 import * as ComponentContainer from "./Container/style.js";
 import * as B from "../../components/Buttons.js";
 import * as M from "../../components/Modal.js";
@@ -42,7 +43,7 @@ import ReactNative from "../../assets/paginaSkill/mobile/reactNative.png";
 import GitHub from "../../assets/paginaSkill/plataform/github.png";
 import GitLab from "../../assets/paginaSkill/plataform/gitlab.png";
 import NetliFy from "../../assets/paginaSkill/plataform/netlify.png";
-import Railway from "../../assets/paginaSkill/plataform/railway.png";
+import Jira from "../../assets/paginaSkill/plataform/jira.png";
 
 import { Link } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
@@ -62,62 +63,7 @@ export const Skills = () => {
   };
   return (
     <>
-      <ComponentHeader.Header size={mobile}>
-        <Link to={"/"}>
-          <div className="logo">
-            <img src={LogoReact} alt="" />
-          </div>
-        </Link>
-        <div className="title">
-          <h1>Portfólio</h1>
-        </div>
-
-        <div className="menu-mobile">
-          <div className="logo-mobile">
-            <img src={LogoMobile} alt="" onClick={menuMobile} />
-          </div>
-          <div className="title-mobile">
-            <h1>Portfólio</h1>
-          </div>
-          <ComponentHeader.BtnGroupMobile size={mobile}>
-            <B.Rainbow>
-              <button className="button-85" role="button">
-                <Link to={"/"}> Home</Link>
-              </button>
-              <button className="button-85" role="button">
-                <Link to={"/habilidades"}>Skills</Link>
-              </button>
-              <button className="button-85" role="button">
-                <Link to={"/contato"}>Contatos</Link>
-              </button>
-              <button className="button-85" role="button">
-                Sobre
-              </button>
-            </B.Rainbow>
-          </ComponentHeader.BtnGroupMobile>
-        </div>
-        <div className="btn-group">
-          <B.BtnWelcome>
-            <Link to={"/habilidades"}>
-              <button className="button-86" role="button">
-                Skills
-              </button>
-            </Link>
-          </B.BtnWelcome>
-          <B.BtnWelcome>
-            <Link to={"/contato"}>
-              <button className="button-86" role="button">
-                Contatos
-              </button>
-            </Link>
-          </B.BtnWelcome>
-          <B.BtnWelcome>
-            <button className="button-86" role="button">
-              Sobre
-            </button>
-          </B.BtnWelcome>
-        </div>
-      </ComponentHeader.Header>
+      <Header />
       <ComponentContainer.Title>
         <div className="wrapper">
           <svg>
@@ -413,7 +359,7 @@ export const Skills = () => {
             </div>
           </div>
         </ComponentContainer.SkillArea>
-        <div className="title">Plataformas e hospedagens</div>
+        <div className="title">Plataformas de gerenciamentos</div>
         <ComponentContainer.SkillArea>
           <div className="card">
             <div className="logo">
@@ -422,9 +368,8 @@ export const Skills = () => {
             <div className="content">
               <span>GitHub</span>
               <p>
-                Conhecimento total na ferramenta mobile, conhecimento na criação
-                do aplicativo, autoconhecimento na criação de componentes e
-                deploy do app.
+                Total conhecimento na ferramenta de versionamento, conhecimento
+                em divisões de branch e uso correto de commit, etc
               </p>
             </div>
           </div>
@@ -436,9 +381,8 @@ export const Skills = () => {
             <div className="content">
               <span>GitLab</span>
               <p>
-                Conhecimento total na ferramenta mobile, conhecimento na criação
-                do aplicativo, autoconhecimento na criação de componentes e
-                deploy do app.
+                Conhecimento pleno na ferramenta de versionamento e experiência
+                profissional em meu antigo emprego
               </p>
             </div>
           </div>
@@ -450,28 +394,27 @@ export const Skills = () => {
             <div className="content">
               <span>Netlify</span>
               <p>
-                Conhecimento total na ferramenta mobile, conhecimento na criação
-                do aplicativo, autoconhecimento na criação de componentes e
-                deploy do app.
+                Total conhecimento na plataforma de hospedagem de site e alguns
+                projetos já hospedados.
               </p>
             </div>
           </div>
 
           <div className="card">
             <div className="logo">
-              <img src={Railway} alt="" />
+              <img src={Jira} alt="" />
             </div>
             <div className="content">
-              <span>Railway</span>
+              <span>Jira</span>
               <p>
-                Conhecimento total na ferramenta mobile, conhecimento na criação
-                do aplicativo, autoconhecimento na criação de componentes e
-                deploy do app.
+                Total conhecimento na metodologia ágil usando a ferramenta Jira,
+                plataforma de gerenciamento de projetos.
               </p>
             </div>
           </div>
         </ComponentContainer.SkillArea>
       </ComponentContainer.Container>
+      <Footer />
     </>
   );
 };

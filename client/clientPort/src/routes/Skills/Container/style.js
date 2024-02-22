@@ -34,6 +34,13 @@ export const SkillArea = styled.div`
   flex-wrap: wrap;
   justify-content: space-around;
 
+  @media (max-width: 1700px) {
+    height: 600px;
+  }
+  @media (max-width: 900px) {
+    height: 1200px;
+  }
+
   .card {
     display: flex;
     margin-top: 20px;

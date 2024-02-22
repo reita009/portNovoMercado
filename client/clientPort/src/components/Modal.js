@@ -49,6 +49,9 @@ export const CardModal = styled.div`
     h1 {
       color: ${Colors.blue};
       font-size: 80px;
+      @media (max-width: 555px) {
+        font-size: 50px;
+      }
     }
     p {
       font-size: 25px;
@@ -66,11 +69,18 @@ export const CardModal = styled.div`
       img {
         height: 200px;
         border-radius: 15px;
+        @media (max-width: 500px) {
+          height: 120px;
+        }
       }
       h1 {
         color: gold;
         font-size: 130px;
         margin-left: 60px;
+
+        @media (max-width: 815px) {
+          display: none;
+        }
       }
     }
   }
@@ -93,6 +103,11 @@ export const CardModal = styled.div`
         cursor: pointer;
         margin-left: 10px;
         margin-right: 10px;
+        img {
+          @media (max-width: 434px) {
+            height: 35px;
+          }
+        }
       }
     }
   }
