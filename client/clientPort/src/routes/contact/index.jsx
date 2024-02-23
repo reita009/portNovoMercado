@@ -25,11 +25,12 @@ import { Link } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
 import { useForm } from "react-hook-form";
 import { gsap } from "gsap";
+import axios from "axios";
 
 export const Contact = () => {
   //states
   const [mobile, setmobile] = useState("");
-  const [showModal, setShowModal] = useState(true);
+  const [showModal, setShowModal] = useState(false);
   const [showStarOff, setShowStarOff] = useState(true);
   const [showStarOn, setShowStarOn] = useState(false);
 
@@ -52,7 +53,7 @@ export const Contact = () => {
   const alertRefName = useRef(null);
   const alertRefEmail = useRef(null);
   const alertRefSubject = useRef(null);
-  const alertRefMessager = useRef(null);
+  const alertRefMessage = useRef(null);
 
   //HookForm
   const {
@@ -65,7 +66,7 @@ export const Contact = () => {
     const alertName = alertRefName.current;
     const alertEmail = alertRefEmail.current;
     const alertSubject = alertRefSubject.current;
-    const alertMessager = alertRefMessager.current;
+    const alertMessage = alertRefMessage.current;
 
     /*Object.keys(errors).length > 0*/
 
@@ -113,9 +114,9 @@ export const Contact = () => {
       );
     }
 
-    if (errors.messager?.type === "required") {
+    if (errors.message?.type === "required") {
       gsap.fromTo(
-        alertMessager,
+        alertMessage,
         {
           opacity: 0,
           x: 300,
@@ -144,9 +145,20 @@ export const Contact = () => {
       setShowModal(true);
     }
   };
-  const handleFormSubmit = (data) => {
-    console.log(data);
+  const handleFormSubmit = async (data) => {
+    const res = await axios
+      .post("http://localhost:8081/message", data)
+      .then((response) => {
+        if (response.status == 200) {
+          setShowModal(true);
+        }
+      })
+      .catch((err) => {
+        console.log(`opa! algo deu errado: ${err}`);
+      });
+    //console.log(data);
   };
+
   const assessment = (vote) => {
     switch (vote) {
       case "show1star":
@@ -416,8 +428,8 @@ export const Contact = () => {
           <ComponentContainer.Alert
             className="alert alert-warning error-msn"
             role="alert"
-            ref={alertRefMessager}
-            isHidden={errors.messager?.type === "required"}
+            ref={alertRefMessage}
+            isHidden={errors.message?.type === "required"}
           >
             <p>campo menssagem obrigatório!</p>
           </ComponentContainer.Alert>
@@ -461,7 +473,7 @@ export const Contact = () => {
               <div className="mb-3 input-area">
                 <label className="form-label">Mensagem:</label>
                 <textarea
-                  {...register("messager", {
+                  {...register("message", {
                     required: true,
                     minLength: 2,
                     maxLength: 300,

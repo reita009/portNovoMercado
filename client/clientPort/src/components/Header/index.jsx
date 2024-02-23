@@ -43,18 +43,25 @@ export const Header = () => {
           <ComponentHeader.BtnGroupMobile size={mobile}>
             <B.Rainbow>
               <button className="button-85" role="button">
+                <Link to={"/"}>Home</Link>
+              </button>
+              <button className="button-85" role="button">
                 <Link to={"/habilidades"}>Skills</Link>
               </button>
               <button className="button-85" role="button">
                 <Link to={"/contato"}>Contatos</Link>
               </button>
-              <button className="button-85" role="button">
-                <Link to={"/sobre"}>Sobre</Link>
-              </button>
             </B.Rainbow>
           </ComponentHeader.BtnGroupMobile>
         </div>
         <div className="btn-group">
+          <B.BtnWelcome>
+            <Link to={"/"}>
+              <button className="button-86" role="button">
+                Home
+              </button>
+            </Link>
+          </B.BtnWelcome>
           <B.BtnWelcome>
             <Link to={"/habilidades"}>
               <button className="button-86" role="button">
@@ -66,13 +73,6 @@ export const Header = () => {
             <Link to={"/contato"}>
               <button className="button-86" role="button">
                 Contatos
-              </button>
-            </Link>
-          </B.BtnWelcome>
-          <B.BtnWelcome>
-            <Link to={"/sobre"}>
-              <button className="button-86" role="button">
-                Sobre
               </button>
             </Link>
           </B.BtnWelcome>

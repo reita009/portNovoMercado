@@ -16,7 +16,7 @@ export const Modal = styled.div`
 
 export const CardModal = styled.div`
   background-color: ${Colors.hardBlue};
-  height: 70%;
+  height: 75%;
   width: 75%;
   top: 18%;
   left: 10%;
@@ -150,10 +150,6 @@ export const CardModal = styled.div`
         width: 100%;
         display: flex;
 
-        @media (max-width: 1600px) {
-          margin-top: 30px;
-        }
-
         h1 {
           color: ${Colors.blue};
         }
@@ -161,6 +157,9 @@ export const CardModal = styled.div`
           margin-left: auto;
           font-size: 20px;
           cursor: pointer;
+          @media (max-width: 1340px) {
+            margin-top: 60px;
+          }
         }
         margin-bottom: 20px;
       }
@@ -173,10 +172,8 @@ export const CardModal = styled.div`
           width: 500px;
         }
         @media (max-width: 820px) {
-          height: 250px;
           width: 80%;
           font-size: 12px;
-          margin-bottom: 300px;
         }
       }
       span {
@@ -199,7 +196,9 @@ export const CardModal = styled.div`
     @media (max-width: 820px) {
       flex-direction: column;
     }
-
+    @media (max-width: 460px) {
+      margin-top: 200px;
+    }
     button {
       height: 15px;
       font-size: 13px;
