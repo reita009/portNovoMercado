@@ -21,7 +21,7 @@ import ContactEmail from "../../assets/Contact/e-mail.gif";
 import ContactLinkedin from "../../assets/Contact/linkedin.gif";
 import ContactPhone from "../../assets/Contact/phone.gif";
 
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
 import { useForm } from "react-hook-form";
 import { gsap } from "gsap";
@@ -31,8 +31,7 @@ export const Contact = () => {
   //states
   const [mobile, setmobile] = useState("");
   const [showModal, setShowModal] = useState(false);
-  const [showStarOff, setShowStarOff] = useState(true);
-  const [showStarOn, setShowStarOn] = useState(false);
+  const [star, setStar] = useState(0);
 
   //states do favorite
   const [showOneStar, setShowOneStar] = useState(false);
@@ -54,6 +53,8 @@ export const Contact = () => {
   const alertRefEmail = useRef(null);
   const alertRefSubject = useRef(null);
   const alertRefMessage = useRef(null);
+
+  const navigate = useNavigate();
 
   //HookForm
   const {
@@ -146,7 +147,7 @@ export const Contact = () => {
     }
   };
   const handleFormSubmit = async (data) => {
-    const res = await axios
+    /*  const res = await axios
       .post("http://localhost:8081/message", data)
       .then((response) => {
         if (response.status == 200) {
@@ -156,7 +157,26 @@ export const Contact = () => {
       .catch((err) => {
         console.log(`opa! algo deu errado: ${err}`);
       });
-    //console.log(data);
+    //console.log(data);*/
+    setShowModal(true);
+  };
+  const handleVoteStar = async () => {
+    /* let votado = { vote: star };
+
+    const res = await axios
+      .post("http://localhost:8081/star", votado)
+      .then((response) => {
+        if (response.status == 200) {
+          console.log(response);
+          navigate("/");
+        }
+      })
+      .catch((err) => {
+        console.log(`opa! algo deu errado: ${err}`);
+      });
+  };
+  const voteStar = (vote) => {
+    setStar(vote);*/
   };
 
   const assessment = (vote) => {
@@ -176,6 +196,7 @@ export const Contact = () => {
         setHiddenFourStars(true);
         setShowFiveStars(false);
         setHiddenFiveStars(true);
+
         break;
       case "show2star":
         setShowOneStar(true);
@@ -202,6 +223,7 @@ export const Contact = () => {
         setHiddenTwoStars(false);
         setShowThreeStars(true);
         setHiddenThreeStars(false);
+        setStar("3");
         break;
       case "hidden3star":
         setShowOneStar(false);
@@ -224,6 +246,7 @@ export const Contact = () => {
         setHiddenThreeStars(false);
         setShowFourStars(true);
         setHiddenFourStars(false);
+        setStar("4");
         break;
       case "hidden4star":
         setShowOneStar(false);
@@ -248,6 +271,7 @@ export const Contact = () => {
         setHiddenFourStars(false);
         setShowFiveStars(true);
         setHiddenFiveStars(false);
+        setStar("5");
 
         break;
       case "hidden5star":
@@ -281,11 +305,16 @@ export const Contact = () => {
               <h1>5.0</h1>
             </div>
           </div>
-          <div className="favorite-area">
+          <form className="favorite-area">
             <h1>Avalie nossa plataforma</h1>
 
             <div className="favoriteStar">
-              <div className="star star-1">
+              <div
+                className="star star-1"
+                onClick={() => {
+                  voteStar(1);
+                }}
+              >
                 {showOneStar && (
                   <img
                     src={StarOn}
@@ -306,7 +335,12 @@ export const Contact = () => {
                 )}
               </div>
 
-              <div className="star  star-2">
+              <div
+                className="star  star-2"
+                onClick={() => {
+                  voteStar(2);
+                }}
+              >
                 {showTwoStars && (
                   <img
                     src={StarOn}
@@ -326,7 +360,12 @@ export const Contact = () => {
                   />
                 )}
               </div>
-              <div className="star  star-3">
+              <div
+                className="star  star-3"
+                onClick={() => {
+                  voteStar(3);
+                }}
+              >
                 {showThreeStars && (
                   <img
                     src={StarOn}
@@ -346,7 +385,12 @@ export const Contact = () => {
                   />
                 )}
               </div>
-              <div className="star  star-4">
+              <div
+                className="star  star-4"
+                onClick={() => {
+                  voteStar(4);
+                }}
+              >
                 {showFourStars && (
                   <img
                     src={StarOn}
@@ -366,7 +410,12 @@ export const Contact = () => {
                   />
                 )}
               </div>
-              <div className="star  star-5">
+              <div
+                className="star  star-5"
+                onClick={() => {
+                  voteStar(5);
+                }}
+              >
                 {showFiveStars && (
                   <img
                     src={StarOn}
@@ -387,12 +436,18 @@ export const Contact = () => {
                 )}
               </div>
             </div>
-          </div>
-          <B.BtnCardModal>
-            <button className="button-63" role="button">
-              Avaliar
-            </button>
-          </B.BtnCardModal>
+          </form>
+          <Link to="/">
+            <B.BtnCardModal>
+              <button
+                className="button-63"
+                role="button"
+                onClick={handleVoteStar}
+              >
+                Avaliar
+              </button>
+            </B.BtnCardModal>
+          </Link>
         </M.CardModal>
       )}
       <Header />

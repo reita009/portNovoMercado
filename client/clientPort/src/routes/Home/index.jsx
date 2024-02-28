@@ -167,9 +167,11 @@ export const Home = () => {
                     </button>
                   </B.Rainbow>
                   <B.Rainbow>
-                    <button className="button-85" role="button">
-                      Entrar em contato
-                    </button>
+                    <Link to="/contato">
+                      <button className="button-85" role="button">
+                        Entrar em contato
+                      </button>
+                    </Link>
                   </B.Rainbow>
                 </div>
               </div>
@@ -184,13 +186,13 @@ export const Home = () => {
             <div className="about">
               <h1>Sobre mim</h1>
               <p>
-                Desenvolvedor Front-end com experiência em React.js, Next.js,
-                Redux, JavaScript, TypeScript, Styled Components, Material UI e
+                Desenvolvedor Full-Stack com experiência em React.js, Node-Js,
+                Php, JavaScript, TypeScript, Styled Components, Material UI e
                 consumo de APIs REST. Apaixonado pelo desenvolvimento de
-                componentes reutilizáveis. Também possui experiência em projetos
-                gerenciados por Metodologias Ágeis. Formado em Sistemas de
-                Informação e cursando Especialização em Front-End na Digital
-                House Brasil.
+                componentes reutilizáveis. Também possuo experiência em projetos
+                gerenciados por Metodologias Ágeis. Cursando Análise e
+                Desenvolvimento de Sistemas e Especialização em Front-End na
+                B7web.
               </p>
             </div>
           </section>
@@ -278,7 +280,7 @@ export const Home = () => {
                 <div className="gradient-effect"></div>
                 <div className="content-project">
                   <div className="name-project">
-                    <span>exemplo</span>
+                    <span>Em Breve!</span>
                   </div>
                   <div className="tec-project">
                     <img src={Node} alt="" />
@@ -292,7 +294,7 @@ export const Home = () => {
                 <div className="gradient-effect"></div>
                 <div className="content-project">
                   <div className="name-project">
-                    <span>exemplo</span>
+                    <span>Em breve!</span>
                   </div>
                   <div className="tec-project">
                     <img src={Node} alt="" />
@@ -306,7 +308,7 @@ export const Home = () => {
                 <div className="gradient-effect"></div>
                 <div className="content-project">
                   <div className="name-project">
-                    <span>exemplo</span>
+                    <span>Em breve!</span>
                   </div>
                   <div className="tec-project">
                     <img src={Node} alt="" />
